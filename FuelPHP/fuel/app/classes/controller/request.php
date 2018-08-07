@@ -20,8 +20,10 @@ class Controller_Request extends Controller_Template
 			{
 				$request = Model_Request::forge(array(
 					'body' => Input::post('body'),
-					'ip' => Input::post('ip'),
+					'ip' => Input::ip(),
 				));
+
+				if (Security::check_token() and $request and $request->save())
 
 				if ($request and $request->save())
 				{
@@ -62,8 +64,8 @@ class Controller_Request extends Controller_Template
 		{
 			$request->body = Input::post('body');
 			$request->ip = Input::post('ip');
-
-			if ($request->save())
+			
+			if (Security::check_token() and $request->save())
 			{
 				Session::set_flash('success', 'Updated request #' . $id);
 

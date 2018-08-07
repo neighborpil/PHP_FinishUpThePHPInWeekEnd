@@ -3,8 +3,9 @@
 	<fieldset>
 		<div class="form-group">
 			<?php echo Form::hidden(Config::get('security.csrf_token_key'),Security::fetch_token()); ?>
-
-				<?php echo Form::input('body', Input::post('body', isset($request) ? $request->body : ''), array('class' => 'col-md-4 form-control', 'placeholder'=>'Body')); ?>
+		</div>
+		<div class="form-group">
+			<?php echo Form::input('body', Input::post('body', isset($request) ? $request->body : ''), array('class' => 'col-md-4 form-control', 'placeholder'=>'Body')); ?>	
 
 		</div>
 		

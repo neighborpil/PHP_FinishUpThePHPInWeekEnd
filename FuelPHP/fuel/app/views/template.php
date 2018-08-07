@@ -22,7 +22,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="/">Main Page</a></li>
-					<li><a href="#">Request</a></li>
+					<li><a href="/request/index">Request</a></li>
 					<li><a href="/tweet/about">About Us</a></li>
 				</ul>
 			</div>
